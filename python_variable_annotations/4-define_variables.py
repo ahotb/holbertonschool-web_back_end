@@ -9,6 +9,6 @@ pi: float = 3.14
  with the value True and an annotation of bool"""
 i_understand_annotations: bool = True
 
-"""Defines a variable school with 
+"""Defines a variable school with
 the value Holberton and an annotation of str"""
 school: str = "Holberton"
