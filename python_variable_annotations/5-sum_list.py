@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from typing import List
-"""5-sum_list.py"""
+"""The input list is annotated as a list of floats,
+      and the return value is annotated as a float."""
 
 
 def sum_list(input_list: List[float]) -> float:
