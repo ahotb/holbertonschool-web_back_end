@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""function that measures the runtime of executing concurrent coroutines"""
+"""function that measures the runtime of
+executing concurrent coroutines"""
+
 import time
 import asyncio
 wait_n = __import__('1-concurrent_coroutines').wait_n
