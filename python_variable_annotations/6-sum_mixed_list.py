@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from typing import List, Union
-"""A type-annotated function sum_mixed_list that takes a list of 
+"""A type-annotated function sum_mixed_list that takes a list of
 integers and floats and returns their sum as a float."""
 
 
