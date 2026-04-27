@@ -17,6 +17,8 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """Initializes a Server instance
+        """
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -27,10 +29,10 @@ class Server:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
-
         return self.__dataset
+
     """Returns the appropriate page of the dataset (i.e. the correct list of rows)
-		"""
+                """
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Returns the appropriate page of the dataset (i.e. the correct list of rows)
