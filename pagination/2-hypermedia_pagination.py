@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """This module implements hypermedia pagination for a dataset of baby names."""
 
 import csv
@@ -44,14 +43,17 @@ class Server:
         return data[start_index:end_index]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
-        """Returns a dictionary containing the following key-value pairs:
-                        page_size: the length of the returned dataset page
-                        page: the current page number
-                        data: the dataset page (equivalent to return from previous task)
-                        next_page: the next page number, None if no next page
-                        prev_page: the previous page number, None if no previous page
-                        total_pages: the total number of pages in the dataset as an integer
-                """
+        """
+        Return pagination metadata with the current page data.
+
+        The returned dictionary contains:
+        - page_size: length of the returned page data
+        - page: current page number
+        - data: the page data
+        - next_page: next page number or None
+        - prev_page: previous page number or None
+        - total_pages: total number of pages (ceil)
+        """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
