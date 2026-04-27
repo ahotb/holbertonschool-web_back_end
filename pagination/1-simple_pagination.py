@@ -36,9 +36,9 @@ class Server:
         """Returns the appropriate page of the dataset (i.e. the correct list of rows)
                 """
         assert isinstance(
-            page, int) and page > 0, "page must be a positive integer"
+            page, int) and page > 0
         assert isinstance(
-            page_size, int) and page_size > 0, "page_size must be a positive integer"
+            page_size, int) and page_size > 0
 
         start, end = index_range(page, page_size)
         data = self.dataset()
