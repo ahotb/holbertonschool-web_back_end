@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Simple pagination"""
+
+"""This module implements hypermedia pagination for a dataset of baby names."""
+
 import csv
 import math
 from typing import Any, Dict, List, Tuple, Optional
 
 
-def index_range(page, page_size) -> Tuple[int, int]:
-    """Returns a tuple of size two containing a start index and an end index"""
-    start = (page - 1) * page_size
-    end = start + page_size
-    return (start,  end)
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """Return a tuple of (start_index, end_index) for pagination."""
+    start_index = (page - 1) * page_size
+    end_index = page * page_size
+    return start_index, end_index
 
 
 class Server:
