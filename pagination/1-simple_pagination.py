@@ -2,10 +2,10 @@
 """Simple pagination"""
 import csv
 import math
-from typing import List
+from typing import List, Tuple
 
 
-def index_range(page, page_size) -> tuple[int, int]:
+def index_range(page, page_size) -> Tuple[int, int]:
     """Returns a tuple of size two containing a start index and an end index"""
     start = (page - 1) * page_size
     end = start + page_size
@@ -30,6 +30,8 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
+    """Returns the appropriate page of the dataset (i.e. the correct list of rows)
+		"""
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Returns the appropriate page of the dataset (i.e. the correct list of rows)
