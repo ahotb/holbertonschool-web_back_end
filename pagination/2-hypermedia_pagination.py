@@ -36,18 +36,16 @@ class Server:
                 """
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """Returns the appropriate page of the dataset (i.e. the correct list of rows)
-                """
-        assert isinstance(
-            page, int) and page > 0
-        assert isinstance(
-            page_size, int) and page_size > 0
+        """Return a page of the dataset, or an empty list if out of range."""
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
-        start, end = index_range(page, page_size)
+        start_index, end_index = index_range(page, page_size)
         data = self.dataset()
-        if start >= len(data):
+
+        if start_index >= len(data):
             return []
-        return data[start:end]
+        return data[start_index:end_index]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """Returns a dictionary containing the following key-value pairs:
