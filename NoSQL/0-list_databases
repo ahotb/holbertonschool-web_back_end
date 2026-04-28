@@ -1,2 +1,2 @@
 // show all the databases
-db.collection.find({})
+show db
