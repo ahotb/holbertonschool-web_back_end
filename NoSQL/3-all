@@ -1,2 +1,2 @@
 // all Collection
-db.Collection({})
+db.school.Collection()
