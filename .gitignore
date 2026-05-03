@@ -1,2 +1,3 @@
 # Python cache/bytecode
 __pycache__/
+git update-index --chmod=+x
