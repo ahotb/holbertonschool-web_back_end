@@ -9,7 +9,7 @@ export default class Airport {
 	get code() {
 		return this._code;
 	}
-	Tostring() {
+	toString() {
 		return `[object ${this._code}]`;
 	}
 }
