@@ -3,4 +3,3 @@ __pycache__/
 git update-index --chmod=+x
 node_modules
 nodesource_setup.sh
-dist
