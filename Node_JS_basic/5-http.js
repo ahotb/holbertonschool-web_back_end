@@ -1,5 +1,5 @@
 const http = require('http');
-const fs = require('fs');
+
 const db = process.argv[2];
 const countStudents = require('./3-read_file_async.js');
 const app = http.createServer((req, res) => {
